@@ -32,14 +32,14 @@ namespace WebApplication.Controllers
                 }
                 else
                 {
-                   var Contact= Touch.ContactUs.FirstOrDefault();
-                   return view(Contact);
+                    var Contact = Touch.ContactUs.FirstOrDefault();
+                    return view(Contact);
                 }
-                    
+
             }
             catch (Exception ex)
             {
-                
+
                 throw;
             }
             return View();
@@ -49,7 +49,7 @@ namespace WebApplication.Controllers
         {
             try
             {
-                if (Input.Id==0)
+                if (Input.Id == 0)
                 {
                     Touch.ContactUs.Add(Input);
                     Touch.SaveChanges();
@@ -63,7 +63,7 @@ namespace WebApplication.Controllers
             }
             catch (Exception ex)
             {
-                
+
                 throw;
             }
             return Redirect("~/Admine/Index");
