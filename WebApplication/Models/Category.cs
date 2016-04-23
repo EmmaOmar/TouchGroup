@@ -15,8 +15,7 @@ namespace WebApplication.Models
         }
        [Key]
         public int Id { get; set; }
-        public string Name { get; set; }
-        [ForeignKey("StandardRefId")]
+        public string Name { get; set; }        
         public SubCategory Subcategory { get; set; }
         public List<Project> Projects { get; set; }
 

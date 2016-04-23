@@ -9,7 +9,7 @@ namespace WebApplication.Models
 {
     public class SubCategory
     {
-       public SubCategory()
+        public SubCategory()
         {
             Projects = new List<Project>();
         }
@@ -17,7 +17,7 @@ namespace WebApplication.Models
         public int Id { get; set; }
 
         public string Name { get; set; }
-        
+        [ForeignKey("Categorys")]
         public int CategoryId { get; set; }
         public Category Category { get; set; }
         public List<Project> Projects { get; set; }
